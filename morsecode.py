@@ -12,7 +12,7 @@ RESET = '\033[0m'
 
 def text_to_morse(text, morse_code_dict):
     morse_code = [] # empty list to store morse code values when translated
-    for char in text: # loop through each character in the text
+    for char in text.upper(): # loop through each character in the text; added .upper() to make sure all characters are uppercase, since the dictionary is uppercase
         morse_char = morse_code_dict.get(char) # get the morse code value for each character
         if morse_char: # if the character is in the dictionary
             morse_code.append(morse_char) # add the morse code value to the list

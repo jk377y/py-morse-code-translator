@@ -10,16 +10,19 @@ RESET = '\033[0m'
 
 # need 2 functions to translate from text to morse, and from morse to text
 
-def text_to_morse(text, morse_code_dict)
-
-
-    return (morse_code)
+def text_to_morse(text, morse_code_dict):
+    morse_code = [] # empty list to store morse code values when translated
+    for char in text: # loop through each character in the text
+        morse_char = morse_code_dict.get(char) # get the morse code value for each character
+        if morse_char: # if the character is in the dictionary
+            morse_code.append(morse_char) # add the morse code value to the list
+    return (morse_code) # return the list of morse code values
 
 
 
 
 def morse_to_text(morse_code, mmorse_code_dict):
-
+    text = [] # empty list to store text values when translated
 
     return (text)
 
@@ -37,13 +40,18 @@ while True:
 
 
     if choice == "1":
-        text_to_morse()
+        text = input("Enter the text to translate: ") # input
+        morse_code = text_to_morse(text, morse_code_dict) # call function
+        print(f"{GREEN}Morse Code Value:{RESET} {BLUE}{morse_code}{RESET}") # output
 
     elif choice == "2":
-        morse_to_text()
+        morse_code = input("Enter the Morse code to translate: ") # input
+        text = morse_to_text(morse_code, morse_code_dict) # call function
+        print(f"{GREEN}Text Value:{RESET} {BLUE}{text}{RESET}") # output
     
     elif choice == "3":
+        print(f"Thank you for using the {RED}Morse Code Translator{RESET}. Goodbye!") # exit
         break
 
     else:
-        print("Invalid choice!")
+        print("Invalid choice. Please enter a number from 1 to 3.") # error message

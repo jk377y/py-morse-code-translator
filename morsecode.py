@@ -16,7 +16,8 @@ def text_to_morse(text, morse_code_dict):
         morse_char = morse_code_dict.get(char) # get the morse code value for each character
         if morse_char: # if the character is in the dictionary
             morse_code.append(morse_char) # add the morse code value to the list
-    return (morse_code) # return the list of morse code values
+    # return(morse_code) # return the list of morse code values ['...','---','...']
+    return '/'.join(morse_code) # return the list of morse code values as a string, with '/' between each character  .../---/...
 
 
 

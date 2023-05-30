@@ -11,7 +11,7 @@ RESET = '\033[0m'
 # need 2 functions to translate from text to morse, and from morse to text
 
 def text_to_morse(text, morse_code_dict)
-
+    
 
     return (morse_code)
 
@@ -37,13 +37,18 @@ while True:
 
 
     if choice == "1":
-        text_to_morse()
+        text = input("Enter the text to translate: ") # input
+        morse_code = text_to_morse(text, morse_code_dict) # call function
+        print(f"{GREEN}Morse Code Value:{RESET} {BLUE}{morse_code}{RESET}") # output
 
     elif choice == "2":
-        morse_to_text()
+        morse_code = input("Enter the Morse code to translate: ") # input
+        text = morse_to_text(morse_code, morse_code_dict) # call function
+        print(f"{GREEN}Text Value:{RESET} {BLUE}{text}{RESET}") # output
     
     elif choice == "3":
+        print(f"Thank you for using the {RED}Morse Code Translator{RESET}. Goodbye!") # exit
         break
 
     else:
-        print("Invalid choice!")
+        print("Invalid choice. Please enter a number from 1 to 3.") # error message

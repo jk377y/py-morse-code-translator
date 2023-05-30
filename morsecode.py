@@ -1,4 +1,6 @@
-# import morse_code.json to get key-value pairs of morse code characters and their corresponding text characters
+# for simplicity in code, just going to define this here for now, instead of importing the json file
+morse_code_dict = {
+        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 'Z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.', '.': '.-.-.-', ',': '--..--', '?': '..--..', "'": '.----.', '!': '-.-.--', '/': '-..-.', '(': '-.--.', ')': '-.--.-', '&': '.-...', ':': '---...', ';': '-.-.-.', '=': '-...-', '+': '.-.-.', '-': '-....-', '_': '..--.-', '"': '.-..-.', '$': '...-..-', '@': '.--.-.', ' ': '/' }
 
 # i like color in the terminal window so i'll start with that
 GREEN = '\033[92m'
@@ -8,7 +10,7 @@ RESET = '\033[0m'
 
 # need 2 functions to translate from text to morse, and from morse to text
 
-def text_to_morse(text, morse_dict)
+def text_to_morse(text, morse_code_dict)
 
 
     return (morse_code)
@@ -16,7 +18,7 @@ def text_to_morse(text, morse_dict)
 
 
 
-def morse_to_text(morse_code, morse_dict):
+def morse_to_text(morse_code, mmorse_code_dict):
 
 
     return (text)
